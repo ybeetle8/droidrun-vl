@@ -1,0 +1,295 @@
+{
+  "status": "success",
+  "data": {
+    "a11y_tree": [
+      {
+        "index": 1,
+        "resourceId": "",
+        "className": "FrameLayout",
+        "text": "FrameLayout",
+        "bounds": "0, 0, 1080, 2520",
+        "children": [
+          {
+            "index": 2,
+            "resourceId": "com.android.settings:id/settings_homepage_container",
+            "className": "ViewGroup",
+            "text": "settings_homepage_container",
+            "bounds": "0, 0, 1080, 2394",
+            "children": [
+              {
+                "index": 3,
+                "resourceId": "com.android.settings:id/homepage_title",
+                "className": "TextView",
+                "text": "设定",
+                "bounds": "63, 352, 253, 479",
+                "children": []
+              },
+              {
+                "index": 4,
+                "resourceId": "com.android.settings:id/search_action_bar",
+                "className": "ViewGroup",
+                "text": "search_action_bar",
+                "bounds": "42, 542, 1038, 679",
+                "children": [
+                  {
+                    "index": 5,
+                    "resourceId": "com.android.settings:id/search_action_bar_title",
+                    "className": "TextView",
+                    "text": "搜索设置",
+                    "bounds": "200, 575, 401, 646",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "index": 6,
+                "resourceId": "com.android.settings:id/main_content_scrollable_container",
+                "className": "ScrollView",
+                "text": "main_content_scrollable_container",
+                "bounds": "0, 721, 1080, 2394",
+                "children": [
+                  {
+                    "index": 7,
+                    "resourceId": "com.android.settings:id/homepage_container",
+                    "className": "LinearLayout",
+                    "text": "homepage_container",
+                    "bounds": "0, 721, 1080, 2394",
+                    "children": [
+                      {
+                        "index": 8,
+                        "resourceId": "com.android.settings:id/recycler_view",
+                        "className": "RecyclerView",
+                        "text": "recycler_view",
+                        "bounds": "0, 721, 1080, 2394",
+                        "children": [
+                          {
+                            "index": 9,
+                            "resourceId": "",
+                            "className": "LinearLayout",
+                            "text": "LinearLayout",
+                            "bounds": "0, 721, 1080, 927",
+                            "children": [
+                              {
+                                "index": 10,
+                                "resourceId": "android:id/title",
+                                "className": "TextView",
+                                "text": "网络和互联网",
+                                "bounds": "189, 763, 507, 834",
+                                "children": []
+                              },
+                              {
+                                "index": 11,
+                                "resourceId": "android:id/summary",
+                                "className": "TextView",
+                                "text": "移动网络、WLAN、热点",
+                                "bounds": "189, 834, 589, 885",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "index": 12,
+                            "resourceId": "",
+                            "className": "LinearLayout",
+                            "text": "LinearLayout",
+                            "bounds": "0, 927, 1080, 1133",
+                            "children": [
+                              {
+                                "index": 13,
+                                "resourceId": "android:id/title",
+                                "className": "TextView",
+                                "text": "设备连接",
+                                "bounds": "189, 969, 401, 1040",
+                                "children": []
+                              },
+                              {
+                                "index": 14,
+                                "resourceId": "android:id/summary",
+                                "className": "TextView",
+                                "text": "蓝牙、Android Auto、NFC",
+                                "bounds": "189, 1040, 622, 1091",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "index": 15,
+                            "resourceId": "",
+                            "className": "LinearLayout",
+                            "text": "LinearLayout",
+                            "bounds": "0, 1133, 1080, 1339",
+                            "children": [
+                              {
+                                "index": 16,
+                                "resourceId": "android:id/title",
+                                "className": "TextView",
+                                "text": "应用",
+                                "bounds": "189, 1175, 295, 1246",
+                                "children": []
+                              },
+                              {
+                                "index": 17,
+                                "resourceId": "android:id/summary",
+                                "className": "TextView",
+                                "text": "应用程序权限、默认应用程序",
+                                "bounds": "189, 1246, 670, 1297",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "index": 18,
+                            "resourceId": "",
+                            "className": "LinearLayout",
+                            "text": "LinearLayout",
+                            "bounds": "0, 1339, 1080, 1545",
+                            "children": [
+                              {
+                                "index": 19,
+                                "resourceId": "android:id/title",
+                                "className": "TextView",
+                                "text": "通知",
+                                "bounds": "189, 1381, 295, 1452",
+                                "children": []
+                              },
+                              {
+                                "index": 20,
+                                "resourceId": "android:id/summary",
+                                "className": "TextView",
+                                "text": "通知历史记录、对话",
+                                "bounds": "189, 1452, 522, 1503",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "index": 21,
+                            "resourceId": "",
+                            "className": "LinearLayout",
+                            "text": "LinearLayout",
+                            "bounds": "0, 1545, 1080, 1751",
+                            "children": [
+                              {
+                                "index": 22,
+                                "resourceId": "android:id/title",
+                                "className": "TextView",
+                                "text": "电池",
+                                "bounds": "189, 1587, 295, 1658",
+                                "children": []
+                              },
+                              {
+                                "index": 23,
+                                "resourceId": "android:id/summary",
+                                "className": "TextView",
+                                "text": "90% - 还需18分钟充满",
+                                "bounds": "189, 1658, 550, 1709",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "index": 24,
+                            "resourceId": "",
+                            "className": "LinearLayout",
+                            "text": "LinearLayout",
+                            "bounds": "0, 1751, 1080, 1957",
+                            "children": [
+                              {
+                                "index": 25,
+                                "resourceId": "android:id/title",
+                                "className": "TextView",
+                                "text": "存储",
+                                "bounds": "189, 1793, 295, 1864",
+                                "children": []
+                              },
+                              {
+                                "index": 26,
+                                "resourceId": "android:id/summary",
+                                "className": "TextView",
+                                "text": "已使用 30% - 还剩 89.10 GB",
+                                "bounds": "189, 1864, 640, 1915",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "index": 27,
+                            "resourceId": "",
+                            "className": "LinearLayout",
+                            "text": "LinearLayout",
+                            "bounds": "0, 1957, 1080, 2163",
+                            "children": [
+                              {
+                                "index": 28,
+                                "resourceId": "android:id/title",
+                                "className": "TextView",
+                                "text": "声音",
+                                "bounds": "189, 1999, 295, 2070",
+                                "children": []
+                              },
+                              {
+                                "index": 29,
+                                "resourceId": "android:id/summary",
+                                "className": "TextView",
+                                "text": "音频、铃声、勿扰",
+                                "bounds": "189, 2070, 485, 2121",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "index": 30,
+                            "resourceId": "",
+                            "className": "LinearLayout",
+                            "text": "LinearLayout",
+                            "bounds": "0, 2163, 1080, 2369",
+                            "children": [
+                              {
+                                "index": 31,
+                                "resourceId": "android:id/title",
+                                "className": "TextView",
+                                "text": "显示",
+                                "bounds": "189, 2205, 295, 2276",
+                                "children": []
+                              },
+                              {
+                                "index": 32,
+                                "resourceId": "android:id/summary",
+                                "className": "TextView",
+                                "text": "亮度调节、休眠、字体大小",
+                                "bounds": "189, 2276, 633, 2327",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "index": 33,
+                            "resourceId": "",
+                            "className": "LinearLayout",
+                            "text": "LinearLayout",
+                            "bounds": "0, 2369, 1080, 2394",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "phone_state": {
+      "currentApp": "设定",
+      "packageName": "com.android.settings",
+      "keyboardVisible": false,
+      "isEditable": false,
+      "focusedElement": {
+        "className": "android.widget.LinearLayout",
+        "resourceId": "com.android.settings:id/homepage_container"
+      }
+    }
+  }
+}

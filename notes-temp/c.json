@@ -1,0 +1,195 @@
+{
+  "status": "success",
+  "data": {
+    "a11y_tree": [
+      {
+        "index": 1,
+        "resourceId": "",
+        "className": "FrameLayout",
+        "text": "FrameLayout",
+        "bounds": "0, 0, 1080, 2520",
+        "children": [
+          {
+            "index": 2,
+            "resourceId": "com.android.launcher3:id/workspace",
+            "className": "ScrollView",
+            "text": "workspace",
+            "bounds": "0, 0, 1080, 2520",
+            "children": [
+              {
+                "index": 3,
+                "resourceId": "",
+                "className": "TextView",
+                "text": "搜狗输入法",
+                "bounds": "15, 79, 225, 383",
+                "children": []
+              },
+              {
+                "index": 4,
+                "resourceId": "",
+                "className": "TextView",
+                "text": "Telegram",
+                "bounds": "225, 79, 435, 383",
+                "children": []
+              },
+              {
+                "index": 5,
+                "resourceId": "",
+                "className": "TextView",
+                "text": "百度手机助手",
+                "bounds": "435, 79, 645, 383",
+                "children": []
+              },
+              {
+                "index": 6,
+                "resourceId": "",
+                "className": "TextView",
+                "text": "Call of Duty",
+                "bounds": "645, 79, 855, 383",
+                "children": []
+              },
+              {
+                "index": 7,
+                "resourceId": "",
+                "className": "TextView",
+                "text": "垃圾清理",
+                "bounds": "855, 79, 1065, 383",
+                "children": []
+              },
+              {
+                "index": 8,
+                "resourceId": "",
+                "className": "TextView",
+                "text": "互传",
+                "bounds": "435, 383, 645, 687",
+                "children": []
+              },
+              {
+                "index": 9,
+                "resourceId": "",
+                "className": "TextView",
+                "text": "音乐",
+                "bounds": "435, 1295, 645, 1599",
+                "children": []
+              },
+              {
+                "index": 10,
+                "resourceId": "",
+                "className": "TextView",
+                "text": "多窗口切换",
+                "bounds": "645, 1295, 855, 1599",
+                "children": []
+              },
+              {
+                "index": 11,
+                "resourceId": "",
+                "className": "TextView",
+                "text": "Droidrun Portal",
+                "bounds": "435, 1599, 645, 1903",
+                "children": []
+              }
+            ]
+          },
+          {
+            "index": 12,
+            "resourceId": "",
+            "className": "View",
+            "text": "主屏幕",
+            "bounds": "0, 79, 1080, 2394",
+            "children": []
+          },
+          {
+            "index": 13,
+            "resourceId": "",
+            "className": "TextView",
+            "text": "电话",
+            "bounds": "15, 1969, 225, 2135",
+            "children": []
+          },
+          {
+            "index": 14,
+            "resourceId": "",
+            "className": "TextView",
+            "text": "信息",
+            "bounds": "225, 1969, 435, 2135",
+            "children": []
+          },
+          {
+            "index": 15,
+            "resourceId": "",
+            "className": "TextView",
+            "text": "Chrome",
+            "bounds": "435, 1969, 645, 2135",
+            "children": []
+          },
+          {
+            "index": 16,
+            "resourceId": "",
+            "className": "TextView",
+            "text": "相册",
+            "bounds": "645, 1969, 855, 2135",
+            "children": []
+          },
+          {
+            "index": 17,
+            "resourceId": "",
+            "className": "TextView",
+            "text": "设定",
+            "bounds": "855, 1969, 1065, 2135",
+            "children": []
+          },
+          {
+            "index": 18,
+            "resourceId": "com.android.launcher3:id/qsb_widget",
+            "className": "AppWidgetHostView",
+            "text": "Google 搜索",
+            "bounds": "28, 2242, 1052, 2389",
+            "children": [
+              {
+                "index": 19,
+                "resourceId": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_background",
+                "className": "ImageView",
+                "text": "Google 搜索",
+                "bounds": "28, 2252, 1052, 2378",
+                "children": []
+              },
+              {
+                "index": 20,
+                "resourceId": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_google_logo",
+                "className": "ImageButton",
+                "text": "Google 应用",
+                "bounds": "28, 2252, 154, 2378",
+                "children": []
+              },
+              {
+                "index": 21,
+                "resourceId": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_voice_btn",
+                "className": "ImageButton",
+                "text": "语音搜索",
+                "bounds": "789, 2252, 915, 2378",
+                "children": []
+              },
+              {
+                "index": 22,
+                "resourceId": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_lens_btn",
+                "className": "ImageButton",
+                "text": "拍照搜索",
+                "bounds": "915, 2252, 1041, 2378",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "phone_state": {
+      "currentApp": "Xperia主屏幕",
+      "packageName": "com.sonymobile.launcher",
+      "keyboardVisible": false,
+      "isEditable": false,
+      "focusedElement": {
+        "resourceId": ""
+      }
+    }
+  }
+}
