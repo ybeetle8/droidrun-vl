@@ -9,7 +9,8 @@
       "Bash(python:*)",
       "Bash(uv run:*)",
       "Bash(set OPENAI_API_KEY=sk-Kd92LE2pud8bVtZE23B47248Bc064006Af400cB6770c8577)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(git config:*)"
     ],
     "deny": [],
     "ask": [],
