@@ -3,35 +3,41 @@
 提交图片并让模型识别图片的像素大小
 """
 import os
+import sys
 import base64
 from pathlib import Path
 
+# 设置控制台编码为 UTF-8
+if sys.platform == "win32":
+    import codecs
+    sys.stdout = codecs.getwriter("utf-8")(sys.stdout.buffer, "strict")
+    sys.stderr = codecs.getwriter("utf-8")(sys.stderr.buffer, "strict")
+
 # 设置环境变量
-os.environ["OPENAI_API_KEY"] = "sk-Kd92LE2pud8bVtZE23B47248Bc064006Af400cB6770c8577"
+os.environ["OPENAI_API_KEY"] = "sk-xxx"
 
-from llama_index.core.multi_modal_llms import MultiModalLLM
-from llama_index.core.schema import ImageDocument
-from llama_index.multi_modal_llms.openai import OpenAIMultiModal
+from droidrun.agent.utils.llm_picker import load_llm
+from llama_index.core.base.llms.types import ChatMessage, MessageRole, TextBlock, ImageBlock
 
 
-def encode_image_to_base64(image_path: str) -> str:
+def load_image_as_bytes(image_path: str) -> bytes:
     """
-    将图片编码为 base64 字符串
+    加载图片为字节数据
 
     Args:
         image_path: 图片路径
 
     Returns:
-        base64 编码的字符串
+        图片的字节数据
     """
     with open(image_path, "rb") as image_file:
-        return base64.b64encode(image_file.read()).decode("utf-8")
+        return image_file.read()
 
 
 def test_image_pixel_detection(
     image_path: str,
     api_base: str,
-    model: str = "gpt-4o",
+    model: str = "/models",
     temperature: float = 0.0,
     timeout: float = 60.0
 ):
@@ -60,38 +66,49 @@ def test_image_pixel_detection(
         return
 
     try:
-        # 创建多模态 LLM
-        print("📡 正在连接到多模态 LLM...")
-        mm_llm = OpenAIMultiModal(
+        # 创建 LLM (使用 OpenAILike 支持 vision)
+        print("📡 正在连接到 LLM...")
+        llm = load_llm(
+            provider_name="OpenAILike",
             model=model,
-            api_key=os.environ["OPENAI_API_KEY"],
             api_base=api_base,
+            api_key=os.environ["OPENAI_API_KEY"],
             temperature=temperature,
-            timeout=timeout,
+            request_timeout=timeout,
         )
 
         # 加载图片
         print(f"📸 正在加载图片: {image_path}")
-        image_document = ImageDocument(image_path=image_path)
+        image_bytes = load_image_as_bytes(image_path)
 
-        # 构建提示
-        prompt = "请仔细观察这张图片，告诉我这张图片的像素大小（宽度和高度）。请直接给出数字，格式为：宽度 x 高度。"
+        # 构建提示消息 (使用 vision 格式)
+        #prompt_text = "请仔细观察这张图片，告诉我这张图片的像素大小（宽度和高度）。格式为：宽度 x 高度。 再找出蓝色圆的坐标 x y"
+        prompt_text = "请仔细观察这张图片，告诉我这张图片上是什么,告诉我这张图片的像素大小（宽度和高度） ,再找出几个圆的坐标 x y"
 
-        print(f"💬 提示: {prompt}")
+        print(f"💬 提示: {prompt_text}")
         print()
         print("🤖 正在调用模型识别图片像素...")
 
+        # 构建包含文本和图片的消息块
+        text_block = TextBlock(text=prompt_text)
+        image_block = ImageBlock(image=image_bytes)
+
+        # 构建包含图片的消息
+        messages = [
+            ChatMessage(
+                role=MessageRole.USER,
+                content=[text_block, image_block],
+            )
+        ]
+
         # 调用模型
-        response = mm_llm.complete(
-            prompt=prompt,
-            image_documents=[image_document],
-        )
+        response = llm.chat(messages)
 
         print()
         print("=" * 100)
         print("✅ 识别结果:")
         print("=" * 100)
-        print(response.text)
+        print(response.message.content)
         print("=" * 100)
 
     except Exception as e:
@@ -107,7 +124,7 @@ def test_image_pixel_detection(
 
 if __name__ == "__main__":
     # 配置参数
-    IMAGE_PATH = r"test\未标题-1 拷贝.jpg"
+    IMAGE_PATH = r"test\未标题-2 拷贝.jpg"
     API_BASE = "http://192.168.18.9:8080/v1"
     MODEL = "/models"
     TEMPERATURE = 0.0
