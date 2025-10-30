@@ -181,11 +181,17 @@ response = llm.stream_chat(messages, **VLLM_EXTRA_PARAMS)
 
 | 问题表现 | 调整方案 |
 |---------|---------|
-| 仍然重复 | 增大 `frequency_penalty` 和 `presence_penalty` 到 0.8-1.0 |
-| 输出太短 | 增大 `max_tokens` 到 3072-4096 |
-| 输出不连贯 | 降低 `frequency_penalty` 和 `presence_penalty` 到 0.2-0.3 |
-| 输出太长 | 减小 `max_tokens` 或优化提示词 |
-| 未按格式输出 | 强化提示词中的格式要求 |
+| 无限重复同一句话 | 设置 penalty 为 0.5-1.0（强惩罚） |
+| 仍有重复但不严重 | 设置 penalty 为 0.1-0.2（中度惩罚） |
+| 输出太短/不够详细 | ① 降低 penalty 到 0.05-0.1（轻度惩罚）<br>② 增大 `max_tokens` 到 4096-8192<br>③ 修改提示词，移除"精简"等限制，要求"详细分析" |
+| 输出不连贯/质量差 | 降低 penalty 到 0.0-0.05（几乎不惩罚） |
+| 输出太长/冗余 | ① 减小 `max_tokens`<br>② 在提示词中要求"简洁" |
+| 未按格式输出 | 强化提示词结构，使用明确的编号和要求 |
+
+**推荐配置：**
+- **平衡配置**：`frequency_penalty=0.05`, `presence_penalty=0.05`, `max_tokens=4048`
+- **详细输出**：`frequency_penalty=0.02`, `presence_penalty=0.02`, `max_tokens=8192`
+- **避免重复优先**：`frequency_penalty=0.3`, `presence_penalty=0.3`, `max_tokens=2048`
 
 ## 验证方法
 
