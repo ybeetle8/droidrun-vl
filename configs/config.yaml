@@ -1,0 +1,142 @@
+# DroidRun-VL 配置文件
+# 自研框架 - 异步并发优先
+
+app:
+  name: "DroidRun-VL"
+  version: "2.0.0"
+  framework: "self-developed"  # 自研框架，不使用 LangGraph
+
+# ============================================
+# LLM 模型配置
+# ============================================
+llm:
+  # Embedding 模型配置
+  embedding:
+    api_base: "http://192.168.18.9:8081/v1"
+    model: "/models"
+    timeout: 30
+    max_retries: 3
+
+  # Qwen3-VL 视觉语言模型配置
+  vision:
+    api_base: "http://192.168.18.9:8080/v1"
+    model: "/models"
+    timeout: 60
+    max_retries: 3
+    temperature: 0.7
+    max_tokens: 2000
+
+# ============================================
+# 向量数据库配置
+# ============================================
+vector_db:
+  type: "lancedb"
+  path: "data/experiences/vector_db"
+  table_name: "experiences"
+  embedding_dim: 768  # 根据 embedding 模型调整
+  metric: "cosine"
+
+# ============================================
+# 感知系统配置
+# ============================================
+perception:
+  # 并发感知 - 核心优势
+  enable_parallel: true          # 启用并发感知（速度提升 3 倍）
+  parallel_timeout: 3.0          # 并发超时（秒）
+
+  # 持续观察配置
+  continuous_observe:
+    enabled: true
+    interval: 0.5                # 观察间隔（秒）
+    auto_close_popup: true       # 自动关闭弹窗
+    detect_loading: true         # 检测加载状态
+    detect_error: true           # 检测错误提示
+
+# ============================================
+# 决策系统配置
+# ============================================
+decision:
+  enable_cot: true               # 启用 CoT 推理
+  enable_metacognition: true     # 启用元认知监控
+  high_risk_threshold: 0.7       # 高风险阈值（触发二次验证）
+  candidate_count: 3             # 候选方案数量
+  max_thinking_time: 5.0         # 最大思考时间（秒）
+
+# ============================================
+# 执行系统配置
+# ============================================
+execution:
+  feedback_wait_time: 0.5        # 即时反馈等待时间（秒）
+  auto_retry: true               # 自动重试
+  max_retry: 2                   # 最大重试次数
+  action_timeout: 10.0           # 单个动作超时（秒）
+
+# ============================================
+# 记忆系统配置
+# ============================================
+memory:
+  # 工作记忆（短期记忆）
+  working_memory:
+    size: 7                      # 容量（7±2 原则）
+    enable_loop_detection: true  # 启用循环检测
+    loop_threshold: 3            # 循环判定阈值（连续重复次数）
+    time_decay: true             # 时间衰减
+
+  # 长期记忆（经验库）
+  long_term_memory:
+    enabled: true
+    retention_days: 90           # 经验保留天数
+    min_success_rate: 0.7        # 最低成功率（低于此值自动淘汰）
+    auto_learn: true             # 自动学习新经验
+    similarity_threshold: 0.85   # 相似度阈值（用于经验匹配）
+
+# ============================================
+# Master Agent 配置
+# ============================================
+master:
+  max_sub_tasks: 20              # 最大子任务数
+  supervision_interval: 2.0      # 监督检查间隔（秒）
+  stuck_threshold: 10            # 卡死判定阈值（秒无进展）
+  enable_recovery: true          # 启用异常恢复
+
+# ============================================
+# Worker Agent 配置
+# ============================================
+worker:
+  max_steps: 50                  # 单个子任务最大步数
+  step_interval: 0.3             # 步骤间隔（秒，模拟人类思考）
+  enable_trial_error: true       # 启用试错机制
+  immediate_feedback: true       # 启用即时反馈
+
+# ============================================
+# 设备配置
+# ============================================
+device:
+  adb:
+    host: "127.0.0.1"
+    port: 5037
+    connect_timeout: 10.0
+
+  screenshot:
+    format: "png"
+    quality: 90
+    save_history: true           # 保存历史截图（用于调试）
+    max_history: 100             # 最大保存数量
+
+# ============================================
+# 日志配置
+# ============================================
+logging:
+  level: "INFO"                  # DEBUG, INFO, WARNING, ERROR
+  file: "data/logs/app.log"
+  rotation: "10 MB"
+  retention: "7 days"
+  format: "{time:YYYY-MM-DD HH:mm:ss} | {level: <8} | {name}:{function}:{line} - {message}"
+
+# ============================================
+# 性能监控配置
+# ============================================
+metrics:
+  enabled: true
+  save_interval: 60              # 指标保存间隔（秒）
+  metrics_file: "data/logs/metrics.json"

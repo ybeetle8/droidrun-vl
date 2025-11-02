@@ -1,0 +1,5 @@
+$84e80b86-ff5d-4d28-8822-1e4e68118046²Ä"id ÿÿÿÿÿÿÿÿÿ*string8Zdefault2task_description ÿÿÿÿÿÿÿÿÿ*string8Zdefault/task_intent ÿÿÿÿÿÿÿÿÿ*string08Zdefault,app_name ÿÿÿÿÿÿÿÿÿ*string08Zdefault@	embedding ÿÿÿÿÿÿÿÿÿ*fixed_size_list:float:76808Zdefault1action_sequence ÿÿÿÿÿÿÿÿÿ*string8Zdefault.success_rate ÿÿÿÿÿÿÿÿÿ*double8Zdefault*	use_count ÿÿÿÿÿÿÿÿÿ*int648Zdefault,total_steps ÿÿÿÿÿÿÿÿÿ*int648Zdefault2total_duration_ms	 ÿÿÿÿÿÿÿÿÿ*int648Zdefault,
+created_at
+ ÿÿÿÿÿÿÿÿÿ*string8Zdefault0last_used_at ÿÿÿÿÿÿÿÿÿ*string08Zdefault,metadata ÿÿÿÿÿÿÿÿÿ*string08Zdefault"'
+lance.auto_cleanup.older_than14days"!
+lance.auto_cleanup.interval20
