@@ -1,10 +1,10 @@
-"""解析 UI 树 JSON 并检测重叠元素"""
+"""Parse UI tree JSON and detect overlapping elements"""
 import json
 from typing import List, Dict, Tuple, Set
 
 
 def parse_bounds(bounds_str: str) -> Dict[str, int]:
-    """解析 bounds 字符串为坐标字典"""
+    """Parse bounds string into coordinate dictionary"""
     coords = bounds_str.split(', ')
     return {
         'left': int(coords[0]),
@@ -15,7 +15,7 @@ def parse_bounds(bounds_str: str) -> Dict[str, int]:
 
 
 def is_overlap(b1: Dict[str, int], b2: Dict[str, int]) -> bool:
-    """检查两个边界是否重叠"""
+    """Check if two boundaries overlap"""
     return not (b1['right'] <= b2['left'] or
                b1['left'] >= b2['right'] or
                b1['bottom'] <= b2['top'] or
@@ -23,31 +23,31 @@ def is_overlap(b1: Dict[str, int], b2: Dict[str, int]) -> bool:
 
 
 def get_center(bounds: Dict[str, int]) -> Tuple[int, int]:
-    """获取边界的中心点"""
+    """Get the center point of bounds"""
     center_x = (bounds['left'] + bounds['right']) // 2
     center_y = (bounds['top'] + bounds['bottom']) // 2
     return (center_x, center_y)
 
 
 def is_point_in_bounds(point: Tuple[int, int], bounds: Dict[str, int]) -> bool:
-    """检查点是否在边界内"""
+    """Check if a point is within bounds"""
     x, y = point
     return (bounds['left'] <= x <= bounds['right'] and
             bounds['top'] <= y <= bounds['bottom'])
 
 
 def is_covered_by(b1: Dict[str, int], b2: Dict[str, int]) -> bool:
-    """检查 b1 的中心点是否被 b2 覆盖"""
+    """Check if the center point of b1 is covered by b2"""
     center = get_center(b1)
     return is_point_in_bounds(center, b2)
 
 
 def flatten_tree(node: Dict, elements: List[Dict] = None) -> List[Dict]:
-    """将树形结构扁平化为列表"""
+    """Flatten tree structure into a list"""
     if elements is None:
         elements = []
 
-    # 添加当前节点（如果有 index）
+    # Add current node (if it has an index)
     if 'index' in node:
         elements.append({
             'index': node['index'],
@@ -57,7 +57,7 @@ def flatten_tree(node: Dict, elements: List[Dict] = None) -> List[Dict]:
             'resourceId': node.get('resourceId', '')
         })
 
-    # 递归处理子节点
+    # Recursively process child nodes
     for child in node.get('children', []):
         flatten_tree(child, elements)
 
@@ -66,59 +66,59 @@ def flatten_tree(node: Dict, elements: List[Dict] = None) -> List[Dict]:
 
 def find_overlaps(elements: List[Dict]) -> List[Tuple[int, int]]:
     """
-    找出所有被覆盖的元素
-    返回: [(被覆盖的index, 覆盖它的index), ...]
+    Find all covered elements
+    Returns: [(covered index, covering index), ...]
     """
     overlaps = []
     covered_indices: Set[int] = set()
 
-    # 按 index 排序，index 大的元素渲染在上层
+    # Sort by index, elements with larger index are rendered on top
     sorted_elements = sorted(elements, key=lambda x: x['index'])
 
     for i, elem1 in enumerate(sorted_elements):
         b1 = parse_bounds(elem1['bounds'])
 
-        # 检查后面的元素（index 更大的）是否覆盖当前元素
+        # Check if later elements (with larger index) cover the current element
         for elem2 in sorted_elements[i+1:]:
             b2 = parse_bounds(elem2['bounds'])
 
             if is_covered_by(b1, b2):
-                # elem1 被 elem2 覆盖
+                # elem1 is covered by elem2
                 if elem1['index'] not in covered_indices:
                     overlaps.append((elem1, elem2))
                     covered_indices.add(elem1['index'])
-                    # 只记录第一个覆盖它的元素
+                    # Only record the first element that covers it
                     break
 
     return overlaps
 
 
 def main():
-    # 读取 JSON 文件
+    # Read JSON file
     with open('test/xy.json', 'r', encoding='utf-8') as f:
         data = json.load(f)
 
-    # 获取 a11y_tree
+    # Get a11y_tree
     a11y_tree = data['data']['a11y_tree']
 
-    # 扁平化树结构
+    # Flatten tree structure
     all_elements = []
     for root in a11y_tree:
         all_elements.extend(flatten_tree(root))
 
-    print(f"总共找到 {len(all_elements)} 个元素\n")
+    print(f"Found {len(all_elements)} elements in total\n")
 
-    # 查找重叠
+    # Find overlaps
     overlaps = find_overlaps(all_elements)
 
-    print(f"发现 {len(overlaps)} 个被覆盖的元素:\n")
+    print(f"Found {len(overlaps)} covered elements:\n")
     print("=" * 80)
 
     for covered, covering in overlaps:
-        print(f"index:{covered['index']} 被 index:{covering['index']} 挡住了")
-        print(f"  被覆盖元素: {covered['className']} - {covered['text'][:30]}")
+        print(f"index:{covered['index']} is blocked by index:{covering['index']}")
+        print(f"  Covered element: {covered['className']} - {covered['text'][:30]}")
         print(f"    bounds: {covered['bounds']}")
-        print(f"  覆盖元素: {covering['className']} - {covering['text'][:30]}")
+        print(f"  Covering element: {covering['className']} - {covering['text'][:30]}")
         print(f"    bounds: {covering['bounds']}")
         print("-" * 80)
 

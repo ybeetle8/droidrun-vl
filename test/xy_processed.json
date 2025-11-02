@@ -1,0 +1,1202 @@
+{
+  "status": "success",
+  "data": {
+    "a11y_tree": [
+      {
+        "index": 1,
+        "resourceId": "",
+        "className": "FrameLayout",
+        "text": "FrameLayout",
+        "bounds": "0, 0, 1080, 2520",
+        "children": [
+          {
+            "index": 2,
+            "resourceId": "com.taobao.idlefish:id/search_bar_back",
+            "className": "ImageView",
+            "text": "返回",
+            "bounds": "0, 79, 110, 195",
+            "children": [],
+            "is_covered": false,
+            "covered_by": null
+          },
+          {
+            "index": 3,
+            "resourceId": "com.taobao.idlefish:id/keyword_scroll",
+            "className": "HorizontalScrollView",
+            "text": "keyword_scroll",
+            "bounds": "126, 89, 765, 184",
+            "children": [
+              {
+                "index": 4,
+                "resourceId": "com.taobao.idlefish:id/keyword_container",
+                "className": "LinearLayout",
+                "text": "keyword_container",
+                "bounds": "126, 89, 765, 184",
+                "children": [
+                  {
+                    "index": 5,
+                    "resourceId": "com.taobao.idlefish:id/keyword_text",
+                    "className": "TextView",
+                    "text": "nvme固态128g",
+                    "bounds": "152, 115, 400, 158",
+                    "children": [],
+                    "is_covered": false,
+                    "covered_by": null
+                  },
+                  {
+                    "index": 6,
+                    "resourceId": "com.taobao.idlefish:id/keyword_delete",
+                    "className": "ImageView",
+                    "text": "删除",
+                    "bounds": "400, 105, 463, 168",
+                    "children": [],
+                    "is_covered": false,
+                    "covered_by": null
+                  }
+                ],
+                "is_covered": true,
+                "covered_by": 6
+              }
+            ],
+            "is_covered": true,
+            "covered_by": 4
+          },
+          {
+            "index": 7,
+            "resourceId": "com.taobao.idlefish:id/photo_search",
+            "className": "ImageView",
+            "text": "图片搜索",
+            "bounds": "765, 94, 849, 178",
+            "children": [],
+            "is_covered": false,
+            "covered_by": null
+          },
+          {
+            "index": 8,
+            "resourceId": "com.taobao.idlefish:id/search_bar_reminder",
+            "className": "LinearLayout",
+            "text": "search_bar_reminder",
+            "bounds": "860, 79, 970, 195",
+            "children": [
+              {
+                "index": 9,
+                "resourceId": "com.taobao.idlefish:id/search_bar_reminder_image",
+                "className": "ImageView",
+                "text": "订阅",
+                "bounds": "896, 92, 949, 145",
+                "children": [],
+                "is_covered": false,
+                "covered_by": null
+              },
+              {
+                "index": 10,
+                "resourceId": "com.taobao.idlefish:id/search_bar_reminder_text",
+                "className": "TextView",
+                "text": "订阅",
+                "bounds": "897, 145, 949, 181",
+                "children": [],
+                "is_covered": false,
+                "covered_by": null
+              }
+            ],
+            "is_covered": true,
+            "covered_by": 9
+          },
+          {
+            "index": 11,
+            "resourceId": "com.taobao.idlefish:id/search_bar_more",
+            "className": "FrameLayout",
+            "text": "search_bar_more",
+            "bounds": "970, 79, 1080, 195",
+            "children": [
+              {
+                "index": 12,
+                "resourceId": "com.taobao.idlefish:id/search_bar_more_icon",
+                "className": "ImageView",
+                "text": "更多",
+                "bounds": "970, 79, 1080, 195",
+                "children": [],
+                "is_covered": false,
+                "covered_by": null
+              },
+              {
+                "index": 13,
+                "resourceId": "com.taobao.idlefish:id/search_bar_more_num",
+                "className": "TextView",
+                "text": "32",
+                "bounds": "1013, 79, 1067, 126",
+                "children": [],
+                "is_covered": false,
+                "covered_by": null
+              }
+            ],
+            "is_covered": true,
+            "covered_by": 12
+          },
+          {
+            "index": 14,
+            "resourceId": "com.taobao.idlefish:id/outer_nested_scroll_view",
+            "className": "ScrollView",
+            "text": "outer_nested_scroll_view",
+            "bounds": "0, 195, 1080, 2394",
+            "children": [
+              {
+                "index": 15,
+                "resourceId": "",
+                "className": "HorizontalScrollView",
+                "text": "HorizontalScrollView",
+                "bounds": "0, 195, 1080, 236",
+                "children": [
+                  {
+                    "index": 16,
+                    "resourceId": "",
+                    "className": "FrameLayout",
+                    "text": "FrameLayout",
+                    "bounds": "21, 195, 166, 236",
+                    "children": [
+                      {
+                        "index": 17,
+                        "resourceId": "",
+                        "className": "TextView",
+                        "text": "全部",
+                        "bounds": "52, 195, 134, 213",
+                        "children": [],
+                        "is_covered": false,
+                        "covered_by": null
+                      }
+                    ],
+                    "is_covered": false,
+                    "covered_by": null
+                  },
+                  {
+                    "index": 18,
+                    "resourceId": "",
+                    "className": "FrameLayout",
+                    "text": "FrameLayout",
+                    "bounds": "166, 195, 393, 236",
+                    "children": [
+                      {
+                        "index": 19,
+                        "resourceId": "",
+                        "className": "TextView",
+                        "text": "个人闲置",
+                        "bounds": "201, 195, 357, 206",
+                        "children": [],
+                        "is_covered": false,
+                        "covered_by": null
+                      }
+                    ],
+                    "is_covered": false,
+                    "covered_by": null
+                  },
+                  {
+                    "index": 20,
+                    "resourceId": "",
+                    "className": "FrameLayout",
+                    "text": "FrameLayout",
+                    "bounds": "393, 195, 538, 236",
+                    "children": [
+                      {
+                        "index": 21,
+                        "resourceId": "",
+                        "className": "TextView",
+                        "text": "行情",
+                        "bounds": "426, 195, 504, 206",
+                        "children": [],
+                        "is_covered": false,
+                        "covered_by": null
+                      }
+                    ],
+                    "is_covered": false,
+                    "covered_by": null
+                  },
+                  {
+                    "index": 22,
+                    "resourceId": "",
+                    "className": "FrameLayout",
+                    "text": "FrameLayout",
+                    "bounds": "538, 195, 738, 236",
+                    "children": [
+                      {
+                        "index": 23,
+                        "resourceId": "",
+                        "className": "TextView",
+                        "text": "AI搜索",
+                        "bounds": "581, 195, 695, 210",
+                        "children": [],
+                        "is_covered": false,
+                        "covered_by": null
+                      }
+                    ],
+                    "is_covered": false,
+                    "covered_by": null
+                  },
+                  {
+                    "index": 24,
+                    "resourceId": "",
+                    "className": "FrameLayout",
+                    "text": "FrameLayout",
+                    "bounds": "738, 195, 883, 236",
+                    "children": [
+                      {
+                        "index": 25,
+                        "resourceId": "",
+                        "className": "TextView",
+                        "text": "回收",
+                        "bounds": "771, 195, 849, 206",
+                        "children": [],
+                        "is_covered": false,
+                        "covered_by": null
+                      }
+                    ],
+                    "is_covered": false,
+                    "covered_by": null
+                  },
+                  {
+                    "index": 26,
+                    "resourceId": "",
+                    "className": "FrameLayout",
+                    "text": "FrameLayout",
+                    "bounds": "883, 195, 1028, 236",
+                    "children": [
+                      {
+                        "index": 27,
+                        "resourceId": "",
+                        "className": "TextView",
+                        "text": "社区",
+                        "bounds": "916, 195, 994, 206",
+                        "children": [],
+                        "is_covered": false,
+                        "covered_by": null
+                      }
+                    ],
+                    "is_covered": false,
+                    "covered_by": null
+                  },
+                  {
+                    "index": 28,
+                    "resourceId": "",
+                    "className": "FrameLayout",
+                    "text": "FrameLayout",
+                    "bounds": "1028, 195, 1080, 236",
+                    "children": [
+                      {
+                        "index": 29,
+                        "resourceId": "",
+                        "className": "TextView",
+                        "text": "用户",
+                        "bounds": "1061, 195, 1080, 206",
+                        "children": [],
+                        "is_covered": false,
+                        "covered_by": null
+                      }
+                    ],
+                    "is_covered": false,
+                    "covered_by": null
+                  }
+                ],
+                "is_covered": true,
+                "covered_by": 22
+              },
+              {
+                "index": 30,
+                "resourceId": "com.taobao.idlefish:id/view_pager",
+                "className": "ViewPager",
+                "text": "view_pager",
+                "bounds": "0, 236, 1080, 2394",
+                "children": [
+                  {
+                    "index": 31,
+                    "resourceId": "",
+                    "className": "FrameLayout",
+                    "text": "FrameLayout",
+                    "bounds": "0, 236, 1080, 2394",
+                    "children": [
+                      {
+                        "index": 32,
+                        "resourceId": "com.taobao.idlefish:id/inner_nested_scroll_view",
+                        "className": "ViewGroup",
+                        "text": "inner_nested_scroll_view",
+                        "bounds": "0, 236, 1080, 2394",
+                        "children": [
+                          {
+                            "index": 33,
+                            "resourceId": "",
+                            "className": "TextView",
+                            "text": "下拉刷新",
+                            "bounds": "519, 446, 655, 481",
+                            "children": [],
+                            "is_covered": true,
+                            "covered_by": 34
+                          },
+                          {
+                            "index": 34,
+                            "resourceId": "com.taobao.idlefish:id/nested_recycler_view",
+                            "className": "RecyclerView",
+                            "text": "nested_recycler_view",
+                            "bounds": "0, 446, 1080, 2394",
+                            "children": [
+                              {
+                                "index": 35,
+                                "resourceId": "",
+                                "className": "FrameLayout",
+                                "text": "FrameLayout",
+                                "bounds": "21, 446, 530, 590",
+                                "children": [
+                                  {
+                                    "index": 36,
+                                    "resourceId": "",
+                                    "className": "FrameLayout",
+                                    "text": "FrameLayout",
+                                    "bounds": "21, 446, 525, 590",
+                                    "children": [
+                                      {
+                                        "index": 37,
+                                        "resourceId": "",
+                                        "className": "TextView",
+                                        "text": "pic三星p​m​971a​ 128g​ n​vme协议固态硬盘 DELL品牌机电脑拆机盘  健康度：良好100%  nvme协议   议  接口m.2  尺寸2280  成色很新实物图  售出无质量问题不退  标价单个价格",
+                                        "bounds": "33, 394, 513, 446",
+                                        "children": [],
+                                        "is_covered": true,
+                                        "covered_by": 103
+                                      },
+                                      {
+                                        "index": 38,
+                                        "resourceId": "",
+                                        "className": "TextView",
+                                        "text": "Samsung/三星|128GB",
+                                        "bounds": "33, 440, 353, 446",
+                                        "children": [],
+                                        "is_covered": true,
+                                        "covered_by": 103
+                                      },
+                                      {
+                                        "index": 39,
+                                        "resourceId": "",
+                                        "className": "TextView",
+                                        "text": "¥",
+                                        "bounds": "33, 467, 54, 502",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      },
+                                      {
+                                        "index": 40,
+                                        "resourceId": "",
+                                        "className": "TextView",
+                                        "text": "56",
+                                        "bounds": "54, 451, 119, 506",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      },
+                                      {
+                                        "index": 41,
+                                        "resourceId": "",
+                                        "className": "TextView",
+                                        "text": "4人想要",
+                                        "bounds": "119, 455, 240, 504",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      },
+                                      {
+                                        "index": 42,
+                                        "resourceId": "",
+                                        "className": "LinearLayout",
+                                        "text": "LinearLayout",
+                                        "bounds": "33, 518, 513, 590",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      },
+                                      {
+                                        "index": 43,
+                                        "resourceId": "",
+                                        "className": "TextView",
+                                        "text": "山东",
+                                        "bounds": "105, 530, 175, 577",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      },
+                                      {
+                                        "index": 44,
+                                        "resourceId": "",
+                                        "className": "TextView",
+                                        "text": "卖家信用极好",
+                                        "bounds": "315, 527, 513, 581",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      }
+                                    ],
+                                    "is_covered": true,
+                                    "covered_by": 42
+                                  }
+                                ],
+                                "is_covered": true,
+                                "covered_by": 36
+                              },
+                              {
+                                "index": 45,
+                                "resourceId": "",
+                                "className": "FrameLayout",
+                                "text": "FrameLayout",
+                                "bounds": "21, 632, 530, 1575",
+                                "children": [
+                                  {
+                                    "index": 46,
+                                    "resourceId": "",
+                                    "className": "FrameLayout",
+                                    "text": "FrameLayout",
+                                    "bounds": "21, 632, 525, 1575",
+                                    "children": [
+                                      {
+                                        "index": 47,
+                                        "resourceId": "",
+                                        "className": "TextView",
+                                        "text": "pic128g​ 固态 淘汰下来的东西 功能正常 里面有东西最好格式 化",
+                                        "bounds": "33, 1316, 513, 1375",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      },
+                                      {
+                                        "index": 48,
+                                        "resourceId": "",
+                                        "className": "TextView",
+                                        "text": "6小时前发布",
+                                        "bounds": "33, 1372, 252, 1425",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      },
+                                      {
+                                        "index": 49,
+                                        "resourceId": "",
+                                        "className": "TextView",
+                                        "text": "¥",
+                                        "bounds": "33, 1452, 54, 1487",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      },
+                                      {
+                                        "index": 50,
+                                        "resourceId": "",
+                                        "className": "TextView",
+                                        "text": "30",
+                                        "bounds": "54, 1436, 121, 1491",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      },
+                                      {
+                                        "index": 51,
+                                        "resourceId": "",
+                                        "className": "TextView",
+                                        "text": "1人想要",
+                                        "bounds": "121, 1440, 242, 1489",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      },
+                                      {
+                                        "index": 52,
+                                        "resourceId": "",
+                                        "className": "LinearLayout",
+                                        "text": "LinearLayout",
+                                        "bounds": "33, 1503, 513, 1575",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      },
+                                      {
+                                        "index": 53,
+                                        "resourceId": "",
+                                        "className": "TextView",
+                                        "text": "四川",
+                                        "bounds": "105, 1515, 175, 1562",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      },
+                                      {
+                                        "index": 54,
+                                        "resourceId": "",
+                                        "className": "TextView",
+                                        "text": "卖家信用极好",
+                                        "bounds": "315, 1512, 513, 1566",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      }
+                                    ],
+                                    "is_covered": false,
+                                    "covered_by": null
+                                  }
+                                ],
+                                "is_covered": true,
+                                "covered_by": 46
+                              },
+                              {
+                                "index": 55,
+                                "resourceId": "",
+                                "className": "FrameLayout",
+                                "text": "FrameLayout",
+                                "bounds": "550, 446, 1059, 1017",
+                                "children": [
+                                  {
+                                    "index": 56,
+                                    "resourceId": "",
+                                    "className": "FrameLayout",
+                                    "text": "FrameLayout",
+                                    "bounds": "550, 446, 1054, 1017",
+                                    "children": [
+                                      {
+                                        "index": 57,
+                                        "resourceId": "",
+                                        "className": "TextView",
+                                        "text": "广告",
+                                        "bounds": "984, 710, 1042, 749",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      },
+                                      {
+                                        "index": 58,
+                                        "resourceId": "",
+                                        "className": "TextView",
+                                        "text": "pic海力士·S​S​D​游戏工作皆宜256GB大容量",
+                                        "bounds": "562, 762, 1042, 821",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      },
+                                      {
+                                        "index": 59,
+                                        "resourceId": "",
+                                        "className": "TextView",
+                                        "text": "全新|1万+数码3c爱好者看过",
+                                        "bounds": "562, 818, 965, 867",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      },
+                                      {
+                                        "index": 60,
+                                        "resourceId": "",
+                                        "className": "TextView",
+                                        "text": "¥",
+                                        "bounds": "562, 894, 583, 929",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      },
+                                      {
+                                        "index": 61,
+                                        "resourceId": "",
+                                        "className": "TextView",
+                                        "text": "143",
+                                        "bounds": "583, 878, 673, 933",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      },
+                                      {
+                                        "index": 62,
+                                        "resourceId": "",
+                                        "className": "TextView",
+                                        "text": "¥183.0015人想要",
+                                        "bounds": "673, 882, 922, 931",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      },
+                                      {
+                                        "index": 63,
+                                        "resourceId": "",
+                                        "className": "TextView",
+                                        "text": "广东",
+                                        "bounds": "634, 957, 704, 1004",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      },
+                                      {
+                                        "index": 64,
+                                        "resourceId": "",
+                                        "className": "TextView",
+                                        "text": "月销超1千件宝贝",
+                                        "bounds": "813, 954, 1042, 1008",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      }
+                                    ],
+                                    "is_covered": false,
+                                    "covered_by": null
+                                  }
+                                ],
+                                "is_covered": true,
+                                "covered_by": 56
+                              },
+                              {
+                                "index": 65,
+                                "resourceId": "",
+                                "className": "FrameLayout",
+                                "text": "FrameLayout",
+                                "bounds": "21, 1617, 530, 2319",
+                                "children": [
+                                  {
+                                    "index": 66,
+                                    "resourceId": "",
+                                    "className": "TextView",
+                                    "text": "大家都在搜",
+                                    "bounds": "112, 1647, 486, 1702",
+                                    "children": [],
+                                    "is_covered": false,
+                                    "covered_by": null
+                                  },
+                                  {
+                                    "index": 67,
+                                    "resourceId": "",
+                                    "className": "FrameLayout",
+                                    "text": "FrameLayout",
+                                    "bounds": "60, 1732, 486, 1824",
+                                    "children": [
+                                      {
+                                        "index": 68,
+                                        "resourceId": "",
+                                        "className": "TextView",
+                                        "text": "笔记本固态",
+                                        "bounds": "83, 1751, 463, 1805",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      }
+                                    ],
+                                    "is_covered": true,
+                                    "covered_by": 68
+                                  },
+                                  {
+                                    "index": 69,
+                                    "resourceId": "",
+                                    "className": "FrameLayout",
+                                    "text": "FrameLayout",
+                                    "bounds": "60, 1847, 486, 1939",
+                                    "children": [
+                                      {
+                                        "index": 70,
+                                        "resourceId": "",
+                                        "className": "TextView",
+                                        "text": "笔记本固态128g",
+                                        "bounds": "83, 1866, 463, 1920",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      }
+                                    ],
+                                    "is_covered": true,
+                                    "covered_by": 70
+                                  },
+                                  {
+                                    "index": 71,
+                                    "resourceId": "",
+                                    "className": "FrameLayout",
+                                    "text": "FrameLayout",
+                                    "bounds": "60, 1962, 486, 2054",
+                                    "children": [
+                                      {
+                                        "index": 72,
+                                        "resourceId": "",
+                                        "className": "TextView",
+                                        "text": "m2固态硬盘",
+                                        "bounds": "83, 1981, 463, 2035",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      }
+                                    ],
+                                    "is_covered": true,
+                                    "covered_by": 72
+                                  },
+                                  {
+                                    "index": 73,
+                                    "resourceId": "",
+                                    "className": "FrameLayout",
+                                    "text": "FrameLayout",
+                                    "bounds": "60, 2077, 486, 2169",
+                                    "children": [
+                                      {
+                                        "index": 74,
+                                        "resourceId": "",
+                                        "className": "TextView",
+                                        "text": "固态硬盘拆机",
+                                        "bounds": "83, 2096, 463, 2150",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      }
+                                    ],
+                                    "is_covered": true,
+                                    "covered_by": 74
+                                  },
+                                  {
+                                    "index": 75,
+                                    "resourceId": "",
+                                    "className": "FrameLayout",
+                                    "text": "FrameLayout",
+                                    "bounds": "60, 2192, 486, 2284",
+                                    "children": [
+                                      {
+                                        "index": 76,
+                                        "resourceId": "",
+                                        "className": "TextView",
+                                        "text": "ssd 128",
+                                        "bounds": "83, 2211, 463, 2265",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      }
+                                    ],
+                                    "is_covered": true,
+                                    "covered_by": 76
+                                  }
+                                ],
+                                "is_covered": true,
+                                "covered_by": 71
+                              },
+                              {
+                                "index": 77,
+                                "resourceId": "",
+                                "className": "FrameLayout",
+                                "text": "FrameLayout",
+                                "bounds": "550, 1059, 1059, 1998",
+                                "children": [
+                                  {
+                                    "index": 78,
+                                    "resourceId": "",
+                                    "className": "FrameLayout",
+                                    "text": "FrameLayout",
+                                    "bounds": "550, 1059, 1054, 1998",
+                                    "children": [
+                                      {
+                                        "index": 79,
+                                        "resourceId": "",
+                                        "className": "TextView",
+                                        "text": "三星  128G​ 固态硬盘 M​2 NVMe协议 2280 清 一色三星的 几十条 需要的来",
+                                        "bounds": "562, 1743, 1042, 1802",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      },
+                                      {
+                                        "index": 80,
+                                        "resourceId": "",
+                                        "className": "TextView",
+                                        "text": "轻微使用痕迹|Samsung/三星",
+                                        "bounds": "562, 1799, 977, 1848",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      },
+                                      {
+                                        "index": 81,
+                                        "resourceId": "",
+                                        "className": "TextView",
+                                        "text": "¥",
+                                        "bounds": "562, 1875, 583, 1910",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      },
+                                      {
+                                        "index": 82,
+                                        "resourceId": "",
+                                        "className": "TextView",
+                                        "text": "46",
+                                        "bounds": "583, 1859, 650, 1914",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      },
+                                      {
+                                        "index": 83,
+                                        "resourceId": "",
+                                        "className": "TextView",
+                                        "text": "已降12.80元36人想要",
+                                        "bounds": "650, 1863, 983, 1912",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      },
+                                      {
+                                        "index": 84,
+                                        "resourceId": "",
+                                        "className": "LinearLayout",
+                                        "text": "LinearLayout",
+                                        "bounds": "562, 1926, 1042, 1998",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      },
+                                      {
+                                        "index": 85,
+                                        "resourceId": "",
+                                        "className": "TextView",
+                                        "text": "广东",
+                                        "bounds": "634, 1938, 704, 1985",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      },
+                                      {
+                                        "index": 86,
+                                        "resourceId": "",
+                                        "className": "TextView",
+                                        "text": "卖家信用极好",
+                                        "bounds": "844, 1935, 1042, 1989",
+                                        "children": [],
+                                        "is_covered": false,
+                                        "covered_by": null
+                                      }
+                                    ],
+                                    "is_covered": false,
+                                    "covered_by": null
+                                  }
+                                ],
+                                "is_covered": true,
+                                "covered_by": 78
+                              },
+                              {
+                                "index": 87,
+                                "resourceId": "",
+                                "className": "FrameLayout",
+                                "text": "FrameLayout",
+                                "bounds": "21, 2361, 530, 2394",
+                                "children": [
+                                  {
+                                    "index": 88,
+                                    "resourceId": "",
+                                    "className": "FrameLayout",
+                                    "text": "FrameLayout",
+                                    "bounds": "21, 2361, 525, 2394",
+                                    "children": [],
+                                    "is_covered": false,
+                                    "covered_by": null
+                                  }
+                                ],
+                                "is_covered": true,
+                                "covered_by": 88
+                              },
+                              {
+                                "index": 89,
+                                "resourceId": "",
+                                "className": "FrameLayout",
+                                "text": "FrameLayout",
+                                "bounds": "550, 2040, 1059, 2394",
+                                "children": [
+                                  {
+                                    "index": 90,
+                                    "resourceId": "",
+                                    "className": "FrameLayout",
+                                    "text": "FrameLayout",
+                                    "bounds": "550, 2040, 1054, 2394",
+                                    "children": [],
+                                    "is_covered": false,
+                                    "covered_by": null
+                                  }
+                                ],
+                                "is_covered": true,
+                                "covered_by": 90
+                              }
+                            ],
+                            "is_covered": false,
+                            "covered_by": null
+                          },
+                          {
+                            "index": 91,
+                            "resourceId": "",
+                            "className": "LinearLayout",
+                            "text": "LinearLayout",
+                            "bounds": "0, 236, 200, 341",
+                            "children": [
+                              {
+                                "index": 92,
+                                "resourceId": "",
+                                "className": "TextView",
+                                "text": "综合",
+                                "bounds": "46, 261, 116, 315",
+                                "children": [],
+                                "is_covered": false,
+                                "covered_by": null
+                              }
+                            ],
+                            "is_covered": true,
+                            "covered_by": 92
+                          },
+                          {
+                            "index": 93,
+                            "resourceId": "",
+                            "className": "LinearLayout",
+                            "text": "LinearLayout",
+                            "bounds": "200, 236, 400, 341",
+                            "children": [
+                              {
+                                "index": 94,
+                                "resourceId": "",
+                                "className": "TextView",
+                                "text": "价格",
+                                "bounds": "245, 264, 317, 313",
+                                "children": [],
+                                "is_covered": false,
+                                "covered_by": null
+                              }
+                            ],
+                            "is_covered": true,
+                            "covered_by": 94
+                          },
+                          {
+                            "index": 95,
+                            "resourceId": "",
+                            "className": "LinearLayout",
+                            "text": "LinearLayout",
+                            "bounds": "400, 236, 567, 341",
+                            "children": [
+                              {
+                                "index": 96,
+                                "resourceId": "",
+                                "className": "TextView",
+                                "text": "降价",
+                                "bounds": "447, 264, 519, 313",
+                                "children": [],
+                                "is_covered": false,
+                                "covered_by": null
+                              }
+                            ],
+                            "is_covered": true,
+                            "covered_by": 96
+                          },
+                          {
+                            "index": 97,
+                            "resourceId": "",
+                            "className": "LinearLayout",
+                            "text": "LinearLayout",
+                            "bounds": "567, 236, 734, 341",
+                            "children": [
+                              {
+                                "index": 98,
+                                "resourceId": "",
+                                "className": "TextView",
+                                "text": "新发",
+                                "bounds": "614, 264, 686, 313",
+                                "children": [],
+                                "is_covered": false,
+                                "covered_by": null
+                              }
+                            ],
+                            "is_covered": true,
+                            "covered_by": 98
+                          },
+                          {
+                            "index": 99,
+                            "resourceId": "",
+                            "className": "LinearLayout",
+                            "text": "LinearLayout",
+                            "bounds": "734, 236, 935, 341",
+                            "children": [
+                              {
+                                "index": 100,
+                                "resourceId": "",
+                                "className": "TextView",
+                                "text": "区域",
+                                "bounds": "780, 264, 852, 313",
+                                "children": [],
+                                "is_covered": false,
+                                "covered_by": null
+                              }
+                            ],
+                            "is_covered": true,
+                            "covered_by": 100
+                          },
+                          {
+                            "index": 101,
+                            "resourceId": "",
+                            "className": "LinearLayout",
+                            "text": "LinearLayout",
+                            "bounds": "935, 236, 1079, 341",
+                            "children": [
+                              {
+                                "index": 102,
+                                "resourceId": "",
+                                "className": "TextView",
+                                "text": "筛选",
+                                "bounds": "936, 264, 1078, 313",
+                                "children": [],
+                                "is_covered": false,
+                                "covered_by": null
+                              }
+                            ],
+                            "is_covered": true,
+                            "covered_by": 102
+                          },
+                          {
+                            "index": 103,
+                            "resourceId": "com.taobao.idlefish:id/filter_bar_rv",
+                            "className": "RecyclerView",
+                            "text": "filter_bar_rv",
+                            "bounds": "0, 341, 1080, 446",
+                            "children": [
+                              {
+                                "index": 104,
+                                "resourceId": "",
+                                "className": "FrameLayout",
+                                "text": "FrameLayout",
+                                "bounds": "21, 341, 257, 446",
+                                "children": [
+                                  {
+                                    "index": 105,
+                                    "resourceId": "com.taobao.idlefish:id/title",
+                                    "className": "TextView",
+                                    "text": "个人闲置",
+                                    "bounds": "100, 370, 236, 416",
+                                    "children": [],
+                                    "is_covered": false,
+                                    "covered_by": null
+                                  }
+                                ],
+                                "is_covered": true,
+                                "covered_by": 105
+                              },
+                              {
+                                "index": 106,
+                                "resourceId": "",
+                                "className": "FrameLayout",
+                                "text": "FrameLayout",
+                                "bounds": "273, 341, 420, 446",
+                                "children": [
+                                  {
+                                    "index": 107,
+                                    "resourceId": "com.taobao.idlefish:id/title",
+                                    "className": "TextView",
+                                    "text": "容量",
+                                    "bounds": "294, 370, 362, 416",
+                                    "children": [],
+                                    "is_covered": false,
+                                    "covered_by": null
+                                  }
+                                ],
+                                "is_covered": true,
+                                "covered_by": 107
+                              },
+                              {
+                                "index": 108,
+                                "resourceId": "",
+                                "className": "FrameLayout",
+                                "text": "FrameLayout",
+                                "bounds": "436, 341, 583, 446",
+                                "children": [
+                                  {
+                                    "index": 109,
+                                    "resourceId": "com.taobao.idlefish:id/title",
+                                    "className": "TextView",
+                                    "text": "品牌",
+                                    "bounds": "457, 370, 525, 416",
+                                    "children": [],
+                                    "is_covered": false,
+                                    "covered_by": null
+                                  }
+                                ],
+                                "is_covered": true,
+                                "covered_by": 109
+                              },
+                              {
+                                "index": 110,
+                                "resourceId": "",
+                                "className": "FrameLayout",
+                                "text": "FrameLayout",
+                                "bounds": "599, 341, 746, 446",
+                                "children": [
+                                  {
+                                    "index": 111,
+                                    "resourceId": "com.taobao.idlefish:id/title",
+                                    "className": "TextView",
+                                    "text": "成色",
+                                    "bounds": "620, 370, 688, 416",
+                                    "children": [],
+                                    "is_covered": false,
+                                    "covered_by": null
+                                  }
+                                ],
+                                "is_covered": true,
+                                "covered_by": 111
+                              },
+                              {
+                                "index": 112,
+                                "resourceId": "",
+                                "className": "FrameLayout",
+                                "text": "FrameLayout",
+                                "bounds": "762, 341, 977, 446",
+                                "children": [
+                                  {
+                                    "index": 113,
+                                    "resourceId": "com.taobao.idlefish:id/title",
+                                    "className": "TextView",
+                                    "text": "功能状态",
+                                    "bounds": "783, 370, 919, 416",
+                                    "children": [],
+                                    "is_covered": false,
+                                    "covered_by": null
+                                  }
+                                ],
+                                "is_covered": true,
+                                "covered_by": 113
+                              }
+                            ],
+                            "is_covered": true,
+                            "covered_by": 108
+                          }
+                        ],
+                        "is_covered": true,
+                        "covered_by": 34
+                      }
+                    ],
+                    "is_covered": true,
+                    "covered_by": 32
+                  }
+                ],
+                "is_covered": true,
+                "covered_by": 31
+              }
+            ],
+            "is_covered": true,
+            "covered_by": 30
+          },
+          {
+            "index": 114,
+            "resourceId": "com.taobao.idlefish:id/scroll_to_top",
+            "className": "ImageView",
+            "text": "回到顶部",
+            "bounds": "912, 2205, 1059, 2352",
+            "children": [],
+            "is_covered": false,
+            "covered_by": null
+          }
+        ],
+        "is_covered": true,
+        "covered_by": 14
+      }
+    ],
+    "phone_state": {
+      "currentApp": "闲鱼",
+      "packageName": "com.taobao.idlefish",
+      "keyboardVisible": false,
+      "isEditable": false,
+      "focusedElement": {
+        "resourceId": ""
+      }
+    }
+  }
+}

@@ -23,7 +23,7 @@ if sys.platform == "win32":
     sys.stderr = codecs.getwriter("utf-8")(sys.stderr.buffer, "strict")
 
 # 设置环境变量
-os.environ["OPENAI_API_KEY"] = "sk-Kd92LE2pud8bVtZE23B47248Bc064006Af400cB6770c8577"
+os.environ["OPENAI_API_KEY"] = "sk-"
 
 # LangGraph 核心导入
 from langgraph.graph import StateGraph, START, END

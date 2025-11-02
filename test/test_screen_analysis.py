@@ -15,7 +15,7 @@ if sys.platform == "win32":
     sys.stderr = codecs.getwriter("utf-8")(sys.stderr.buffer, "strict")
 
 # 设置环境变量
-os.environ["OPENAI_API_KEY"] = "sk-Kd92LE2pud8bVtZE23B47248Bc064006Af400cB6770c8577"
+os.environ["OPENAI_API_KEY"] = "sk-"
 
 from droidrun.tools.adb import AdbTools
 from droidrun.agent.utils.llm_picker import load_llm
