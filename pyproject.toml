@@ -11,8 +11,10 @@ dependencies = [
     "lancedb>=0.25.2",
     "llama-index==0.14.4",
     "llama-index-llms-google-genai>=0.6.2",
+    "loguru>=0.7.3",
     "posthog>=6.7.6",
     "pydantic>=2.11.10",
+    "requests>=2.32.5",
     "rich>=14.1.0",
 ]
 requires-python = ">=3.11"

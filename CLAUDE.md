@@ -152,9 +152,16 @@ droidrun-vl/
 - [x] 配置管理模块（`src/utils/config.py`）
 - [x] LLM 客户端封装（`src/llm/client.py`）
 - [x] 向量存储封装（`src/memory/vector_store.py`）
+- [x] 基础数据模型（`src/models/*.py`）
+  - Action 动作模型
+  - Task 任务模型
+  - Perception 感知模型
+- [x] 设备交互层（`src/device/`）
+  - AndroidController 异步设备控制器
+  - ExecutionResult 统一返回格式
+  - 完整的设备操作能力（tap/swipe/input/screenshot/ui_tree 等）
 
 ### 进行中 🚧
-- [ ] 基础数据模型（`src/models/*.py`）
 - [ ] Master Agent 核心实现
 - [ ] Worker Agent 认知循环
 - [ ] 感知系统（并发）
@@ -165,21 +172,24 @@ droidrun-vl/
 
 ### 安装依赖
 ```bash
-uv add openai pydantic lancedb pyyaml loguru
+uv add openai pydantic lancedb pyyaml loguru adbutils requests
 ```
 
-### 测试配置
+### 测试基础设置
 ```bash
+# 测试配置管理
 uv run src/utils/config.py
-```
 
-### 测试 LLM 客户端
-```bash
+# 测试 LLM 客户端
 uv run src/llm/client.py
-```
 
-### 测试向量存储
-```bash
+# 测试向量存储
 uv run src/memory/vector_store.py
+
+# 测试设备控制器（需要连接设备）
+uv run test_device.py
+
+# 完整基础测试
+uv run test_basic_setup.py
 ```
 
