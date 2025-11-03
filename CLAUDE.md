@@ -40,68 +40,92 @@
 droidrun-vl/
 │
 ├── src/                          # 核心源代码
-│   ├── core/                     # 核心认知引擎（自研）
-│   │   ├── master_agent.py       # Master Agent（任务管理）
-│   │   ├── worker_agent.py       # Worker Agent（认知执行）
-│   │   ├── cognitive_loop.py     # 认知主循环
-│   │   └── state_manager.py      # 状态管理器
+│   ├── core/                     # 核心策略树引擎
+│   │   ├── __init__.py
+│   │   ├── strategy_node.py      # 统一策略节点 (核心)
+│   │   ├── strategy_tree.py      # 策略树执行器
+│   │   └── state.py              # 状态管理
 │   │
-│   ├── perception/               # 感知系统（并发）
-│   │   ├── vision_analyzer.py    # 视觉分析（VL 模型）
+│   ├── perception/               # 感知系统 (并发 + 多模态)
+│   │   ├── __init__.py
+│   │   ├── vision_analyzer.py    # VL 模型视觉分析
 │   │   ├── ui_detector.py        # UI 元素检测
-│   │   ├── ocr_extractor.py      # 文本提取
-│   │   ├── screen_observer.py    # 持续观察（后台任务）
-│   │   └── fusion.py             # 多模态融合
+│   │   ├── ocr_extractor.py      # OCR 文本提取
+│   │   ├── multimodal_fusion.py  # 多模态融合 (AgenticRAG)
+│   │   └── screen_observer.py    # 持续观察 (后台任务)
 │   │
-│   ├── decision/                 # 决策系统
-│   │   ├── decision_maker.py     # 核心决策器（CoT）
-│   │   ├── metacognition.py      # 元认知监控
-│   │   ├── planner.py            # 任务规划器
+│   ├── decision/                 # 决策系统 (CoT + 反思)
+│   │   ├── __init__.py
+│   │   ├── decision_maker.py     # 核心决策器 (CoT + 交错检索)
+│   │   ├── branching.py          # 分支生成器
+│   │   ├── reflection.py         # 反思生成器 (Reflexion)
 │   │   └── risk_evaluator.py     # 风险评估
 │   │
 │   ├── execution/                # 执行系统
-│   │   ├── action_executor.py    # 动作执行（tap/swipe/input）
+│   │   ├── __init__.py
+│   │   ├── action_executor.py    # 动作执行器
 │   │   ├── feedback_controller.py # 即时反馈控制器
-│   │   ├── trial_error.py        # 试错机制
-│   │   └── recovery.py           # 异常恢复
+│   │   ├── screen_comparator.py  # 前后屏幕对比 (MobileAgent)
+│   │   ├── error_threshold.py    # 错误阈值控制器 (MobileAgent)
+│   │   └── corrective.py         # 自我纠错 (AgenticRAG)
 │   │
-│   ├── memory/                   # 记忆系统
-│   │   ├── working_memory.py     # 工作记忆（7±2, deque）
-│   │   ├── vector_store.py       # 向量存储（LanceDB）
-│   │   ├── long_term_memory.py   # 长期记忆管理
-│   │   ├── spatial_memory.py     # 空间记忆（页面导航图）
-│   │   └── retriever.py          # 经验检索器
+│   ├── memory/                   # 记忆系统 (多层 + 反思)
+│   │   ├── __init__.py
+│   │   ├── working_memory.py     # 工作记忆 (7±2 + 循环检测)
+│   │   ├── reflection_memory.py  # 反思记忆 (滑动窗口)
+│   │   ├── adaptive_retriever.py # 自适应检索器 (AgenticRAG)
+│   │   ├── vector_store.py       # 向量存储封装
+│   │   ├── experience_store.py   # 经验存储 (仅成功 + 分层)
+│   │   └── spatial_memory.py     # 空间记忆 (页面导航图)
 │   │
 │   ├── device/                   # 设备交互层
-│   │   ├── android_controller.py # Android 控制器（基于 droidrun）
+│   │   ├── __init__.py
+│   │   ├── android_controller.py # Android 控制器
 │   │   ├── adb_tools.py          # ADB 工具封装
 │   │   └── screen_capture.py     # 截屏工具
 │   │
-│   ├── models/                   # 数据模型（Pydantic）
+│   ├── models/                   # 数据模型 (Pydantic)
+│   │   ├── __init__.py
 │   │   ├── task.py               # 任务模型
 │   │   ├── action.py             # 动作模型
 │   │   ├── perception.py         # 感知结果模型
 │   │   ├── decision.py           # 决策模型
-│   │   └── experience.py         # 经验模型
+│   │   ├── strategy.py           # 策略节点模型
+│   │   ├── experience.py         # 经验模型
+│   │   └── reflection.py         # 反思模型
 │   │
 │   ├── llm/                      # LLM 集成
-│   │   ├── client.py             # LLM 客户端（统一接口）✅
+│   │   ├── __init__.py
+│   │   ├── client.py             # LLM 客户端 (统一接口)
 │   │   ├── prompts/              # Prompt 模板
+│   │   │   ├── __init__.py
+│   │   │   ├── perception_prompts.py
+│   │   │   ├── decision_prompts.py
+│   │   │   ├── reflection_prompts.py  # 反思 Prompt
+│   │   │   └── retrieval_prompts.py   # 检索 Prompt
 │   │   └── parsers.py            # 输出解析器
 │   │
 │   ├── utils/                    # 工具函数
+│   │   ├── __init__.py
 │   │   ├── config.py             # 配置管理 ✅
 │   │   ├── logger.py             # 日志系统
 │   │   ├── metrics.py            # 性能指标
+│   │   ├── visualizer.py         # 执行可视化 (Mermaid)
 │   │   └── helpers.py            # 辅助函数
 │   │
 │   └── main.py                   # 程序入口
 │
 ├── data/                         # 数据存储
 │   ├── experiences/              # 经验库
-│   │   └── vector_db/            # 向量数据库（LanceDB）✅
+│   │   ├── vector_db/            # 向量数据库 (LanceDB) ✅
+│   │   │   ├── atomic/           # Level 1: 原子操作级
+│   │   │   ├── task/             # Level 2: 任务序列级
+│   │   │   └── strategy/         # Level 3: 策略级
+│   │   └── reflections.jsonl     # 反思记录
 │   ├── spatial_maps/             # 空间记忆
 │   ├── screenshots/              # 运行时截图
+│   │   ├── before/               # 执行前截图
+│   │   └── after/                # 执行后截图
 │   └── logs/                     # 执行日志
 │
 ├── configs/                      # 配置文件
@@ -109,23 +133,33 @@ droidrun-vl/
 │
 ├── examples/                     # 示例代码
 │   ├── simple_task.py            # 简单任务示例
-│   ├── loop_task.py              # 循环任务示例
-│   └── recovery_demo.py          # 异常恢复演示
+│   ├── complex_task.py           # 复杂任务示例
+│   ├── reflection_demo.py        # 反思学习演示
+│   └── retrieval_demo.py         # 检索优化演示
 │
 ├── tests/                        # 测试目录
 │   ├── unit/                     # 单元测试
+│   │   ├── test_strategy_node.py
+│   │   ├── test_reflection.py
+│   │   ├── test_adaptive_retriever.py
+│   │   ├── test_screen_comparator.py
+│   │   └── test_error_threshold.py
 │   ├── integration/              # 集成测试
+│   │   ├── test_strategy_tree.py
+│   │   └── test_end_to_end.py
 │   └── fixtures/                 # 测试数据
+│       ├── screenshots/
+│       └── mock_experiences.json
 │
 ├── notes/                        # 设计文档
-│   ├── 顶层架构设计2.md
-│   ├── 项目工程代码结构规划2.md
-│   └── ...
+│   ├── 顶层架构设计3_经验.md      # 本文档的理论基础
+│   ├── 项目工程代码结构规划2.md   # 前代架构
+│   └── 项目工程代码结构规划3.md   # 本文档 (当前)
 │
 ├── pyproject.toml                # 项目配置
 ├── uv.lock                       # 依赖锁定
 ├── README.md
-└── CLAUDE.md                     # 本文件
+└── CLAUDE.md                     # Claude 指令
 ```
 
 ## 模型配置
