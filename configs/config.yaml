@@ -134,6 +134,15 @@ logging:
   format: "{time:YYYY-MM-DD HH:mm:ss} | {level: <8} | {name}:{function}:{line} - {message}"
 
 # ============================================
+# 策略树配置 (Phase 1)
+# ============================================
+strategy_tree:
+  max_depth: 10                  # 最大递归深度
+  max_branches: 5                # 最大分支数
+  timeout_seconds: null          # 超时限制（null 表示无限制）
+  enable_loop_detection: true    # 启用循环检测
+
+# ============================================
 # 性能监控配置
 # ============================================
 metrics:

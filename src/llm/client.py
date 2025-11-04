@@ -305,6 +305,110 @@ class LLMClient:
 
         return response.choices[0].message.content
 
+    # ========================================
+    # 便捷方法（为其他模块提供兼容接口）
+    # ========================================
+
+    async def generate_text(
+        self,
+        prompt: str,
+        system_prompt: Optional[str] = None,
+        temperature: Optional[float] = None,
+        max_tokens: Optional[int] = None,
+    ) -> str:
+        """
+        生成文本（别名方法，用于兼容）
+
+        Args:
+            prompt: 提示词
+            system_prompt: 系统提示词
+            temperature: 温度
+            max_tokens: 最大 token 数
+
+        Returns:
+            生成的文本
+        """
+        return await self.generate(prompt, system_prompt, temperature, max_tokens)
+
+    async def generate_with_image(
+        self,
+        prompt: str,
+        image_data: Union[bytes, str],
+        temperature: Optional[float] = None,
+        max_tokens: Optional[int] = None,
+    ) -> str:
+        """
+        使用图片生成文本（别名方法）
+
+        Args:
+            prompt: 提示词
+            image_data: 图片数据
+            temperature: 温度
+            max_tokens: 最大 token 数
+
+        Returns:
+            生成的文本
+        """
+        return await self.analyze_image(image_data, prompt, temperature, max_tokens)
+
+    async def generate_with_images(
+        self,
+        prompt: str,
+        image_data_list: List[Union[bytes, str]],
+        temperature: Optional[float] = None,
+        max_tokens: Optional[int] = None,
+    ) -> str:
+        """
+        使用多张图片生成文本
+
+        Args:
+            prompt: 提示词
+            image_data_list: 图片数据列表
+            temperature: 温度
+            max_tokens: 最大 token 数
+
+        Returns:
+            生成的文本
+        """
+        # 处理图片格式
+        image_contents = []
+        for image_data in image_data_list:
+            if isinstance(image_data, bytes):
+                image_b64 = base64.b64encode(image_data).decode('utf-8')
+            else:
+                image_b64 = image_data
+
+            image_contents.append({
+                "type": "image_url",
+                "image_url": {
+                    "url": f"data:image/png;base64,{image_b64}"
+                },
+            })
+
+        # 构建消息
+        messages = [
+            {
+                "role": "user",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": prompt,
+                    },
+                    *image_contents,
+                ],
+            }
+        ]
+
+        # 调用模型
+        response = await self.vision_client.chat.completions.create(
+            model=config.vision_model,
+            messages=messages,
+            temperature=temperature or config.vision_temperature,
+            max_tokens=max_tokens or config.vision_max_tokens,
+        )
+
+        return response.choices[0].message.content
+
 
 # 全局客户端实例
 _client: Optional[LLMClient] = None
