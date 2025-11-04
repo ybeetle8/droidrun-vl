@@ -1,0 +1,185 @@
+[
+    {'index': 1, 'resourceId': '', 'className': 'FrameLayout', 'text': 'FrameLayout', 'bounds': '0,
+        0,
+        1080,
+        2520', 'children': [
+            {'index': 2, 'resourceId': 'com.android.settings:id/content_parent', 'className': 'ViewGroup', 'text': 'content_parent', 'bounds': '0,
+                0,
+                1080,
+                2394', 'children': [
+                    {'index': 3, 'resourceId': 'com.android.settings:id/collapsing_toolbar', 'className': 'FrameLayout', 'text': '开发者选项', 'bounds': '0,
+                        0,
+                        1080,
+                        549', 'children': [
+                            {'index': 4, 'resourceId': '', 'className': 'ImageButton', 'text': '向上导航', 'bounds': '0,
+                                79,
+                                147,
+                                226', 'children': []
+                            },
+                            {'index': 5, 'resourceId': '', 'className': 'TextView', 'text': '搜索设置', 'bounds': '954,
+                                89,
+                                1080,
+                                215', 'children': []
+                            }
+                        ]
+                    },
+                    {'index': 6, 'resourceId': 'com.android.settings:id/switch_bar', 'className': 'LinearLayout', 'text': 'switch_bar', 'bounds': '0,
+                        549,
+                        1080,
+                        822', 'children': [
+                            {'index': 7, 'resourceId': 'com.android.settings:id/switch_text', 'className': 'TextView', 'text': '使用“开发者选项”', 'bounds': '105,
+                                650,
+                                808,
+                                721', 'children': []
+                            },
+                            {'index': 8, 'resourceId': 'android:id/switch_widget', 'className': 'Switch', 'text': 'switch_widget', 'bounds': '850,
+                                622,
+                                996,
+                                748', 'children': []
+                            }
+                        ]
+                    },
+                    {'index': 9, 'resourceId': 'com.android.settings:id/recycler_view', 'className': 'RecyclerView', 'text': 'recycler_view', 'bounds': '0,
+                        822,
+                        1080,
+                        2394', 'children': [
+                            {'index': 10, 'resourceId': '', 'className': 'LinearLayout', 'text': 'LinearLayout', 'bounds': '0,
+                                822,
+                                1080,
+                                1028', 'children': [
+                                    {'index': 11, 'resourceId': 'android:id/title', 'className': 'TextView', 'text': '系统跟踪', 'bounds': '63,
+                                        864,
+                                        275,
+                                        935', 'children': []
+                                    },
+                                    {'index': 12, 'resourceId': 'android:id/summary', 'className': 'TextView', 'text': '记录系统活动并在稍后分析以提升性能', 'bounds': '63,
+                                        935,
+                                        692,
+                                        986', 'children': []
+                                    }
+                                ]
+                            },
+                            {'index': 13, 'resourceId': '', 'className': 'LinearLayout', 'text': 'LinearLayout', 'bounds': '0,
+                                1070,
+                                1080,
+                                1091', 'children': []
+                            },
+                            {'index': 14, 'resourceId': '', 'className': 'LinearLayout', 'text': 'LinearLayout', 'bounds': '0,
+                                1091,
+                                1080,
+                                1297', 'children': [
+                                    {'index': 15, 'resourceId': 'android:id/title', 'className': 'TextView', 'text': '内存', 'bounds': '63,
+                                        1133,
+                                        169,
+                                        1204', 'children': []
+                                    },
+                                    {'index': 16, 'resourceId': 'android:id/summary', 'className': 'TextView', 'text': '平均内存用量为 5.3 GB，共 8.0 GB', 'bounds': '63,
+                                        1204,
+                                        632,
+                                        1255', 'children': []
+                                    }
+                                ]
+                            },
+                            {'index': 17, 'resourceId': '', 'className': 'LinearLayout', 'text': 'LinearLayout', 'bounds': '0,
+                                1297,
+                                1080,
+                                1452', 'children': [
+                                    {'index': 18, 'resourceId': 'android:id/title', 'className': 'TextView', 'text': '错误报告', 'bounds': '63,
+                                        1339,
+                                        275,
+                                        1410', 'children': []
+                                    }
+                                ]
+                            },
+                            {'index': 19, 'resourceId': '', 'className': 'LinearLayout', 'text': 'LinearLayout', 'bounds': '0,
+                                1452,
+                                1080,
+                                1658', 'children': [
+                                    {'index': 20, 'resourceId': 'android:id/title', 'className': 'TextView', 'text': '桌面备份密码', 'bounds': '63,
+                                        1494,
+                                        381,
+                                        1565', 'children': []
+                                    },
+                                    {'index': 21, 'resourceId': 'android:id/summary', 'className': 'TextView', 'text': '桌面完整备份当前未设置密码保护', 'bounds': '63,
+                                        1565,
+                                        618,
+                                        1616', 'children': []
+                                    }
+                                ]
+                            },
+                            {'index': 22, 'resourceId': '', 'className': 'LinearLayout', 'text': 'LinearLayout', 'bounds': '0,
+                                1658,
+                                1080,
+                                1864', 'children': [
+                                    {'index': 23, 'resourceId': 'android:id/title', 'className': 'TextView', 'text': '不锁定屏幕', 'bounds': '63,
+                                        1700,
+                                        328,
+                                        1771', 'children': []
+                                    },
+                                    {'index': 24, 'resourceId': 'android:id/summary', 'className': 'TextView', 'text': ' 充电时屏幕不会休眠', 'bounds': '63,
+                                        1771,
+                                        396,
+                                        1822', 'children': []
+                                    },
+                                    {'index': 25, 'resourceId': 'android:id/switch_widget', 'className': 'Switch', 'text': 'switch_widget', 'bounds': '892,
+                                        1698,
+                                        1038,
+                                        1824', 'children': []
+                                    }
+                                ]
+                            },
+                            {'index': 26, 'resourceId': '', 'className': 'LinearLayout', 'text': 'LinearLayout', 'bounds': '0,
+                                1864,
+                                1080,
+                                2070', 'children': [
+                                    {'index': 27, 'resourceId': 'android:id/title', 'className': 'TextView', 'text': '启用蓝牙 HCI 信息收集日志', 'bounds': '63,
+                                        1906,
+                                        706,
+                                        1977', 'children': []
+                                    },
+                                    {'index': 28, 'resourceId': 'android:id/summary', 'className': 'TextView', 'text': '已停用', 'bounds': '63,
+                                        1977,
+                                        174,
+                                        2028', 'children': []
+                                    }
+                                ]
+                            },
+                            {'index': 29, 'resourceId': '', 'className': 'LinearLayout', 'text': 'LinearLayout', 'bounds': '0,
+                                2070,
+                                1080,
+                                2276', 'children': [
+                                    {'index': 30, 'resourceId': 'android:id/title', 'className': 'TextView', 'text': 'OEM 解锁', 'bounds': '63,
+                                        2112,
+                                        294,
+                                        2183', 'children': []
+                                    },
+                                    {'index': 31, 'resourceId': 'android:id/summary', 'className': 'TextView', 'text': '允许解锁引导加载程序', 'bounds': '63,
+                                        2183,
+                                        433,
+                                        2234', 'children': []
+                                    },
+                                    {'index': 32, 'resourceId': 'android:id/switch_widget', 'className': 'Switch', 'text': 'switch_widget', 'bounds': '892,
+                                        2110,
+                                        1038,
+                                        2236', 'children': []
+                                    }
+                                ]
+                            },
+                            {'index': 33, 'resourceId': '', 'className': 'LinearLayout', 'text': 'LinearLayout', 'bounds': '0,
+                                2276,
+                                1080,
+                                2394', 'children': [
+                                    {'index': 34, 'resourceId': 'android:id/title', 'className': 'TextView', 'text': '正在运行的服务', 'bounds': '63,
+                                        2318,
+                                        434,
+                                        2389', 'children': []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
